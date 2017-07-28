@@ -12,7 +12,7 @@ Copyright@2017
 
 ## 1 Preface
 开发环境显卡型号N卡: `GTX 1080 TI `  
-![](./png/gtx1080.png)
+![](../png/gtx1080.png)
 ## 2 CUDA 环境搭建 
 
 #### 2.1 查看 nvcc 版本

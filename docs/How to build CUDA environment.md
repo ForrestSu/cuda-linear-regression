@@ -13,16 +13,16 @@ Copyright@2017
 ## 1 Preface
 > 我和大家一样，都是一次接触 GPU 编程，这中间有地方讲的不正确的地方，还敬请指出！
 #### 1.1 首先确认配置的 Nvidia 显卡型号 
-![nvida](./png/nvidia.png)   
+![nvida](../png/nvidia.png)   
 官网查看CUDA兼容的GPU型号[cuda-gpu](https://developer.nvidia.com/cuda-gpus) `(20170612)`
-![nvida](./png/nvs-support.png)
+![nvida](../png/nvs-support.png)
 > CUDA Toolkit on x86_32 is unsupported  
 
 ## 2 CUDA 环境搭建
 #### 2.1 Download
 nvidia [cuda-toolkit](https://developer.nvidia.com/cuda-toolkit)
 下载对应的开发包，安装的时候选择自定义安装，然后下一步、下一步即可。
-![sdk](./png/sdk.png)  
+![sdk](../png/sdk.png)  
 
 #### 2.2 检查是否成功安装
 安装完成后，检查是否成功安装。  
@@ -171,7 +171,7 @@ CUDA 专门定义了一个 C 语言扩展用以调用内核函数。语法如下
 >其中：num_blocks 告诉 GPU 启动线程块的数量；   
 > num_threads 表示单个 Block 内启动的线程数。 
 
-![线程块](./png/block.png)
+![线程块](../png/block.png)
 
 > *向量的减法、乘法类似*。
 
@@ -191,7 +191,7 @@ CUDA 专门定义了一个 C 语言扩展用以调用内核函数。语法如下
 [2] [vs2013下编写你的第一个CUDA程序](http://blog.csdn.net/kyocen/article/details/51424161)　*简单的方式：可以直接新建 CUDA 8.0 的project*  
 [3] CUDA并行程序设计：GPU编程指南· Shane Cook 著   
 [4] GeForce GTX 280 GPU  
- ![](./png/gpu.png)
+ ![](../png/gpu.png)
 > 名词解释：  
 > SM:  Streaming Multiprocessor 流处理簇  
 > SP:  Stream Processor 流处理器  
