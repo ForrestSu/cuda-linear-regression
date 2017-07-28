@@ -1,0 +1,39 @@
+Licence: GPL
+Author: Remco Bouckaert remco@cs.waikato.ac.nz, rrb@xm.co.nz
+
+This package contains a function for inverting a symmetric positive definit matrix
+using a GPU. For usage, see the example in testspd.cpp.
+
+Also, general block matrix inversion through Gaussian
+elimination (without pivotting). See testge.cpp for example usage. 
+Note: GE may not be sufficiently stable in single precision. See Makefile to change
+to double precision.
+
+Required: CUDA and BLAS, available from http://www.nvidia.com/object/cuda_get.html
+
+You may need to edit the Makefile to point to the correct location of your CUDA install.
+
+make
+
+Sample run:
+
+[remco@localhost gpuinvert]$ testge -dev 2 -n 1000
+Using device 2 with n=1000
+starting inversion n = 1000   1330.0 ms     0.75 Gflops done!
+
+Other values:
+n = 7500    62190.0 ms     6.78 Gflops done!
+n = 10000  154090.0 ms     6.49 Gflops done!
+
+
+[remco@localhost gpuinvert]$ ./testspd -dev 1 -n 1000
+Using device 1 with n=1000
+Cublas initialized...
+inversion started    50.0 ms    53.33 Gflops done!
+
+Other values:
+n=5000   2140.0 ms   155.76 Gflops done!
+n=10000 14380.0 ms   185.44 Gflops done!
+n 11000 18860.0 ms   188.19 Gflops done!
+
+Not sure whether the Gflops calculation is correct though...
