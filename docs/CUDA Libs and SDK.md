@@ -47,9 +47,7 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
 
 ![](../png/linear.png)
 
-
-$$ standard\_bias = \sqrt{\frac{1}{n}\sum_{i=1}^n (y_i - \bar y)^2}$$
-
+$$ standard\_bias = \sqrt{\frac{1}{n-1}\sum_{i=0}^n (y_i - \bar y)^2}$$
 
 ### Reference
 [1] [Nvidia 开发者文档](http://docs.nvidia.com/cuda/cuda-installation-guide-microsoft-windows/index.html)   
